@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
-  background-color: var(--nfl-dark-grey);
-  border-bottom: 3px solid var(--nfl-red);
+  background-color: var(--grey);
+  border-bottom: 3px solid var(--red);
 }
 
 .LogoContainer {
