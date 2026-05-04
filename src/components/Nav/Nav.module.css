@@ -1,0 +1,24 @@
+.NavList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.NavItem {
+  font-size: 1.2rem;
+  font-family: var(--special), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--nfl-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.NavItem:hover {
+  color: var(--red);
+  transform: scale(1.05);
+}

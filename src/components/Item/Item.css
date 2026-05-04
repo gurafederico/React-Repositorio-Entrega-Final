@@ -1,0 +1,77 @@
+/* Item.css */
+
+@keyframes entradaDesdeAbajo {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  text-decoration: none;
+
+  opacity: 0;
+  animation: entradaDesdeAbajo 0.8s ease-out forwards;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--red);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  padding: 20px;
+  background-color: var(grey);
+  border-bottom: 1px solid var(--red);
+}
+
+.card h3 {
+  color: var(--silver);
+  font-family: var(--impact), sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1.2rem 1rem 0.5rem 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card p {
+  color: var(--red);
+  font-family: var(--college), sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 1rem 1.2rem 1rem;
+}
+
+.card span {
+  color: var(--silver);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 1rem 1rem 1rem;
+  text-align: right;
+}

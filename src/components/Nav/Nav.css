@@ -1,0 +1,54 @@
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  font-size: 1.2rem;
+  font-family: var(--clarendon), sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--red);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-list li a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 8px;
+}
+
+.nav-list li a span {
+  display: inline-block;
+  transform: translateY(-3px);
+  line-height: 0;
+}
+
+.nav-list li:hover {
+  color: var(--silver);
+  transform: translateY(-2px);
+}
+
+.nav-list li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--navy);
+  transition: width 0.3s ease;
+}
+
+.nav-list li:hover::after {
+  width: 100%;
+}

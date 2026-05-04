@@ -1,0 +1,86 @@
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* usamos tus variables del app.css */
+  background-color: var(--navy);
+  color: var(--white);
+  font-family: var(--text), sans-serif;
+
+  /* fondo con overlay para mejorar legibilidad */
+  background-image:
+    linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)),
+    url("/img/fondo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-family: var(--title);
+}
+
+/* clases de utilidad con variables */
+.primary {
+  color: var(--silver);
+}
+
+.secondary {
+  color: var(--navy);
+}
+
+.disabled {
+  /* color gris estandar para deshabilitados */
+  color: #7a7a7a;
+}
+
+/* botones generales estilo nfl */
+.btn {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--text);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--red);
+}
+
+.btn:disabled {
+  background-color: #7a7a7a;
+  cursor: not-allowed;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

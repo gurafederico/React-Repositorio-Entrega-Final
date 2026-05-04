@@ -1,0 +1,75 @@
+/* Header.css */
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: var(--nfl-dark-grey);
+  border-bottom: 3px solid var(--nfl-red);
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 15px;
+  height: 80px;
+}
+
+.LogoContainer img {
+  height: 100%;
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.HeaderTitle {
+  font-family: var(--title);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 4px;
+  font-style: italic;
+  color: var(--red);
+  text-shadow: 2px 2px 0px var(--dark);
+  transition: all 0.3s ease;
+  display: inline-block;
+
+  /* efecto*/
+  text-shadow:
+    0 0 10px rgba(255, 60, 0, 0.4),
+    2px 2px 2px rgba(0, 0, 0, 0.8);
+
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* efectos */
+
+.LogoContainer:hover img {
+  transform: scale(1.05);
+}
+
+.LogoContainer:hover .HeaderTitle {
+  color: #ffffff;
+  filter: drop-shadow(0 0 12px solid var(--red));
+}
+
+/* responsivo para tamaños de pantalla */
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .LogoContainer {
+    height: 60px;
+  }
+}
