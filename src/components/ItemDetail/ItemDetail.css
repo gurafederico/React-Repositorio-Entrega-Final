@@ -129,19 +129,22 @@ h1 {
 @media (max-width: 1100px) {
   .detail-box {
     flex-direction: column;
-    max-width: 500px;
+    width: 95%; /* Se adapta al ancho de cualquier pantalla */
+    max-width: none; /* Eliminamos la restricción fija */
+    margin: 10px auto;
   }
+
   .info-side {
     border-right: none;
     border-bottom: 1px solid var(--grey);
     width: 100%;
-    padding: 30px;
+    padding: 20px; /* Padding intermedio que sirve para ambos */
   }
+
   .product-card-mini {
     flex-direction: column;
-    padding-bottom: 20px;
-  }
-  .mini-content {
     align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }

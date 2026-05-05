@@ -4,7 +4,7 @@
     "name": "Dolphins",
     "description": "Casco Miami Dolphins Retro.",
     "detail": "Miami Dolphins 90´s. Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/dolphins.jpeg"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Green Bay",
     "description": "Casco Green Bay Packers.",
     "detail": "Green Bay Packers Home edition. Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/gb.jpeg"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Lions",
     "description": "Casco Detroit Lions.",
     "detail": "Detroit Lions Home. Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/lions.jpeg"
   },
   {
@@ -28,7 +28,7 @@
     "name": "SF49",
     "description": "Casco San Francisco 49ers.",
     "detail": "San Francisco 49ers Gold Home . Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/sf49.jpeg"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Steelers",
     "description": "Casco Pitsburgh Steelers.",
     "detail": "Pitsburgh Steelers 80´s edition. Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/steelers.jpeg"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Vikings",
     "description": "Casco Minessota Vikings.",
     "detail": "Minessota Viking Home. Fabricado en policarbonato con rejilla de acero.",
-    "price": 600,
+    "price": 190,
     "image": "/img/vikings.jpeg"
   }
 ]
