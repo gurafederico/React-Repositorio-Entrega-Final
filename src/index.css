@@ -7,12 +7,16 @@
 }
 
 body {
-  /* usamos tus variables del app.css */
+  /* BACKGROUND-COLOR: Usamos el Navy de los Dolphins definido en App.css */
   background-color: var(--navy);
-  color: var(--white);
-  font-family: var(--text), sans-serif;
 
-  /* fondo con overlay para mejorar legibilidad */
+  /* COLOR: Texto principal en blanco para que resalte sobre el fondo oscuro */
+  color: var(--red);
+
+  /* FONT-FAMILY: Cambiado de --text (que no existía) a --title para mantener consistencia */
+  font-family: var(--title), sans-serif;
+
+  /* BACKGROUND-IMAGE: El gradiente usa el color --dark para oscurecer la imagen de fondo */
   background-image:
     linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)),
     url("/img/fondo.jpg");
@@ -31,49 +35,68 @@ body {
 
 main {
   flex: 1;
-  width: 80%;
-  margin: auto;
+  /* WIDTH: Cambiado a 100% para que las tarjetas de la Home tengan espacio para fluir.
+     El margen lateral lo manejamos con padding en los componentes para más flexibilidad. */
+  width: 100%;
+  max-width: 1400px; /* Evita que en monitores ultra-wide se estire demasiado */
+  margin: 0 auto;
 }
 
 h1 {
   width: 100%;
   text-align: center;
+  /* FONT-FAMILY: Usa Chakra Petch (definida como --title) */
   font-family: var(--title);
+  padding: 20px 0;
 }
 
-/* clases de utilidad con variables */
+/* CLASES DE UTILIDAD */
+
 .primary {
+  /* COLOR: Usamos el Silver de la paleta NFL para destacar textos secundarios */
   color: var(--silver);
 }
 
 .secondary {
+  /* COLOR: Usamos el Navy para elementos sobre fondos claros */
   color: var(--navy);
 }
 
 .disabled {
-  /* color gris estandar para deshabilitados */
+  /* COLOR: Gris neutro para elementos deshabilitados */
   color: #7a7a7a;
 }
 
-/* botones generales estilo nfl */
+/* BOTONES ESTILO NFL */
+
 .btn {
+  /* BACKGROUND: Fondo azul Navy */
   background-color: var(--navy);
+  /* COLOR: Texto blanco */
   color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px; /* Un radio más pequeño da un look más técnico/deportivo */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  font-family: var(--text);
-  transition: background-color 0.3s ease;
+  /* FONT-FAMILY: Usamos Chakra Petch para que el botón se vea moderno */
+  font-family: var(--title);
+  text-transform: uppercase; /* Estilo deportivo */
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
+  /* BACKGROUND: Cambia al Rojo NFL cuando pasas el mouse */
   background-color: var(--red);
+  /* Agregamos una sombra sutil roja para el efecto de brillo */
+  box-shadow: 0 0 10px rgba(213, 10, 10, 0.3);
 }
 
 .btn:disabled {
-  background-color: #7a7a7a;
+  background-color: #444444;
+  color: #888888;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 ul {

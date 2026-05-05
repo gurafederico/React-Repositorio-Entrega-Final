@@ -1,7 +1,7 @@
-/* importo de google fonts */
+/*importacion fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Graduate&family=Ultra&family=Anton&display=swap");
 
-/* reset global*/
+/* reset global */
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +12,12 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+  background-color: var(--dark);
 }
 
+/* var de entorno*/
 :root {
-  /* colores nfl */
+  /* colores*/
   --navy: #013369;
   --red: #d50a0a;
   --white: #ffffff;
@@ -30,9 +32,8 @@ body {
   --college: "Graduate", serif;
   --clarendon: "Ultra", serif;
   --impact: "Anton", sans-serif;
-  --special: "Grindiron";
 
-  /* mapeo de variables*/
+  /* mapeo de variables */
   --accent: var(--silver);
   --accent-bg: var(--grey);
   --accent-border: var(--red);
@@ -42,6 +43,7 @@ body {
   --social-bg: var(--dark);
 }
 
+/* componentes globales */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -61,6 +63,7 @@ body {
   }
 }
 
+/* seccion animada */
 .hero {
   position: relative;
 
@@ -137,10 +140,6 @@ body {
   gap: 8px;
   margin: 32px 0 0;
 
-  .logo {
-    height: 18px;
-  }
-
   a {
     color: var(--text-h);
     font-size: 16px;
@@ -156,10 +155,6 @@ body {
     &:hover {
       box-shadow: var(--shadow);
     }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
   }
 }
 
@@ -168,76 +163,48 @@ body {
   border-top: 1px solid var(--border);
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
-
-/* responsiva global*/
+/* responsiva global */
 @media (max-width: 1100px) {
+  /* Contenedores de Detalle */
   .detail-box,
   .item-detail-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 95% !important;
-    margin: 20px auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 20px auto;
   }
 
+  /* secciones de contenido */
   .image-side,
   .info-side {
-    width: 100% !important;
-    max-width: 100% !important;
-    border-right: none !important;
+    width: 100%;
+    border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 20px !important;
-    text-align: center !important;
+    padding: 20px;
+    text-align: center;
   }
 
-  /*para itemdetail */
-  .products-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    width: 100% !important;
-    gap: 1rem !important;
-  }
-
+  /* header & footer */
   header,
   footer {
-    height: auto !important;
-    flex-direction: column !important;
-    padding: 20px !important;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
     gap: 20px;
   }
 
   nav ul {
-    flex-direction: column !important;
+    flex-direction: column;
     gap: 15px;
   }
 
   #next-steps {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   #docs {
-    border-right: none !important;
+    border-right: none;
     border-bottom: 1px solid var(--border);
   }
 
@@ -252,12 +219,13 @@ body {
 }
 
 @media (max-width: 650px) {
-  .products-container {
-    grid-template-columns: 1fr !important;
-  }
-
   .hero .base {
     width: 130px;
+  }
+
+  #next-steps ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #next-steps ul li {

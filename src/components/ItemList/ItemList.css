@@ -1,12 +1,43 @@
-/* ItemDetail.css */
+/* ItemList.css */
+
 .products-container {
+  /* Activamos Grid para controlar las columnas */
+  display: grid;
+
+  /* Definimos exactamente 3 columnas de igual tamaño */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Espaciado entre las tarjetas (NFL style: amplio y limpio) */
+  gap: 30px;
+
+  /* Centrado y márgenes */
   margin: 40px auto;
   max-width: 1200px;
   padding: 20px;
+  width: 100%;
 }
 
 .products-container a {
   text-decoration: none;
   color: inherit;
+  /* El display block ayuda a que toda la tarjeta sea cliqueable */
   display: block;
+}
+
+/* RESPONSIVIDAD: Para que no se rompa el diseño en pantallas más chicas */
+
+@media (max-width: 1100px) {
+  .products-container {
+    /* Mostramos 2 tarjetas por fila en tablets */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .products-container {
+    /* Mostramos 1 sola tarjeta por fila en celulares */
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
 }
