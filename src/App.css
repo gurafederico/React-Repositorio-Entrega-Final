@@ -1,6 +1,19 @@
 /* importo de google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Graduate&family=Ultra&family=Anton&display=swap");
 
+/* RESET GLOBAL (Para que no se rompa el ancho) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 :root {
   /* colores nfl */
   --navy: #013369;
@@ -28,6 +41,7 @@
   --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   --social-bg: var(--dark);
 }
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -93,11 +107,6 @@
   place-content: center;
   place-items: center;
   flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
 }
 
 #next-steps {
@@ -108,9 +117,6 @@
   & > div {
     flex: 1 1 0;
     padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
   }
 
   .icon {
@@ -118,20 +124,10 @@
     width: 22px;
     height: 22px;
   }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 #docs {
   border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
 }
 
 #next-steps ul {
@@ -165,30 +161,11 @@
       width: 18px;
     }
   }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
 }
 
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
 }
 
 .ticks {
@@ -210,5 +187,76 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+}
+
+/* SECCIÓN RESPONSIVA GLOBAL */
+@media (max-width: 1024px) {
+  /* Arreglo para contenedores que deben apilarse */
+  #center,
+  #next-steps,
+  .detail-box,
+  .product-card-mini {
+    flex-direction: column !important;
+    padding: 20px !important;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  /* Ajuste de Header y Footer */
+  header,
+  footer {
+    height: auto !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  /* Arreglo para ItemDetail y bordes */
+  #docs,
+  .info-side,
+  .image-side {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    width: 100% !important;
+    padding: 20px 0 !important;
+  }
+
+  #next-steps ul {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  #spacer {
+    height: 48px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .base {
+    width: 130px;
+  }
+
+  #next-steps ul li {
+    flex: 1 1 100%;
   }
 }
