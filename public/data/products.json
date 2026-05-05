@@ -34,16 +34,16 @@
   {
     "id": 5,
     "name": "Steelers",
-    "description": "Casco de los Pitsburgh Steelers.",
-    "detail": "Pitsburgh Steelers 80´s edition. Fabricado en policarbonato con rejilla de acero, fabricado por Riddell.",
+    "description": "Casco Pitsburgh Steelers.",
+    "detail": "Casco de losPitsburgh Steelers 80´s edition. Fabricado en policarbonato con rejilla de acero, fabricado por Riddell.",
     "price": 190,
     "image": "/img/steelers.jpeg"
   },
   {
     "id": 6,
     "name": "Vikings", 
-    "description": "Casco de los Minessota Vikings.",
-    "detail": "Minessota Viking Home. Fabricado en policarbonato con rejilla de acero, fabricado por Xenith.",
+    "description": "Casco Minessota Vikings.",
+    "detail": "Casco de los Minessota Viking Home. Fabricado en poliascarbonato con rejilla de acero, fabricado por Xenith.",
     "price": 190,
     "image": "/img/vikings.jpeg"
   }
