@@ -128,23 +128,22 @@ h1 {
 /* responsivo para pantallas */
 @media (max-width: 1100px) {
   .detail-box {
+    display: flex; /* Asegúrate de que tenga flex */
     flex-direction: column;
-    width: 95%; /* Se adapta al ancho de cualquier pantalla */
-    max-width: none; /* Eliminamos la restricción fija */
-    margin: 10px auto;
+    width: 95vw; /* Usar viewport width ayuda a evitar desbordamientos */
+    margin: 0 auto;
+  }
+
+  .image-side img,
+  .info-side img {
+    max-width: 100%; /* Fundamental para que la imagen no "rompa" el layout */
+    height: auto;
   }
 
   .info-side {
+    width: 100% !important;
     border-right: none;
     border-bottom: 1px solid var(--grey);
-    width: 100%;
-    padding: 20px; /* Padding intermedio que sirve para ambos */
-  }
-
-  .product-card-mini {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
   }
 }
