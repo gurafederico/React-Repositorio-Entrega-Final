@@ -29,7 +29,7 @@
 }
 
 .team-title {
-  color: var(--white);
+  color: var(--gold);
   font-family: var(--college);
   letter-spacing: 2.5px;
   font-size: 2.2rem;
@@ -40,8 +40,8 @@
 .description-text {
   color: var(--silver);
   font-family: var(--title);
-  letter-spacing: 1.5px;
-  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
 }
 
 /* cuerpo de la tarjeta */

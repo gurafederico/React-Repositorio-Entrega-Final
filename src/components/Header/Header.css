@@ -65,11 +65,18 @@
 @media (max-width: 768px) {
   .Header {
     flex-direction: column;
-    padding: 15px;
-    gap: 15px;
+    padding: 20px 15px;
+    gap: 25px;
+    text-align: center;
   }
 
   .LogoContainer {
     height: 60px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .HeaderTitle {
+    font-size: 2rem;
   }
 }

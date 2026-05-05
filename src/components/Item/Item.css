@@ -15,17 +15,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* COLOR: Usamos el gris oscuro de la paleta */
   background-color: var(--grey);
-  /* BORDE: Rojo NFL para resaltar el producto */
   border: 1px solid var(--red);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   height: 100%;
   text-decoration: none;
-
-  /* ANIMACIÓN: Entrada suave al cargar */
   opacity: 0;
   animation: entradaDesdeAbajo 0.8s ease-out forwards;
 
@@ -36,15 +32,14 @@
 }
 
 .card:hover {
-  /* Elevación al pasar el mouse */
   transform: translateY(-8px);
-  border-color: var(--white); /* Cambia a blanco en hover para destacar */
+  border-color: var(--white);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
 }
 
 .card img {
   width: 100%;
-  /* ALTURA: Ajustada para que todos los cascos/ítems se vean parejos */
+
   height: 220px;
   object-fit: contain;
   padding: 15px;
@@ -53,13 +48,12 @@
 }
 
 .card h3 {
-  /* COLOR: Silver (plata) NFL */
-  color: var(--silver);
-  /* FUENTE: Anton (definida como --impact) para look de titulares deportivos */
+  color: var(--gold);
   font-family: var(--impact), sans-serif;
   font-weight: 900;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  font-size: 1.6rem; /* Bajado un poco para que no rompa en pantallas chicas */
+  font-size: 1.7rem;
   margin: 1rem 1rem 0.5rem 1rem;
   white-space: nowrap;
   overflow: hidden;
@@ -67,22 +61,20 @@
 }
 
 .card p {
-  /* COLOR: Rojo NFL para el precio, que sea lo que más resalte */
   color: var(--red);
-  /* FUENTE: Graduate (definida como --college) estilo universitario */
   font-family: var(--college), sans-serif;
   font-weight: 700;
+  letter-spacing: 1.5px;
   font-size: 1.4rem;
   margin: 0 1rem 0.8rem 1rem;
 }
 
 .card span {
-  /* COLOR: Silver para información secundaria (ej. stock o categoría) */
   color: var(--silver);
   font-size: 0.8rem;
-  font-family: var(--title); /* Chakra Petch para coherencia */
+  font-family: var(--title);
   font-weight: 700;
   text-transform: uppercase;
-  margin: auto 1rem 1rem 1rem; /* El 'auto' arriba empuja el span al final de la tarjeta */
+  margin: auto 1rem 1rem 1rem;
   text-align: right;
 }
