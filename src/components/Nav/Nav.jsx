@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
-/* 1. Importamos el hook del contexto */
 import { useCart } from "../Context/CartContext";
 
 export const Nav = () => {

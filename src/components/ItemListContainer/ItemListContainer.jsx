@@ -5,7 +5,7 @@ export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  /* pedido al archivo local */
+  
   useEffect(() => {
     setLoading(true);
 
