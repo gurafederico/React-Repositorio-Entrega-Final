@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>cargando...</p>;
+  if (loading) return <p>Cargando...</p>;
 
   return (
     <section>

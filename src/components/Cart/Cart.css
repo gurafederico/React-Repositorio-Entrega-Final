@@ -225,19 +225,19 @@
 
 .empty-cart-msg {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: var(--dark);
   border: 2px dashed var(--silver);
-  border-radius: 15px;
-  margin-top: 50px;
+  border-radius: 30px;
+  margin-top: 30px;
 }
 
 .empty-cart-msg h2 {
   color: var(--gold) !important;
   font-family: var(--impact), sans-serif !important;
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-back {
