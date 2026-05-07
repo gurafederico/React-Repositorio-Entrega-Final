@@ -3,7 +3,7 @@
     "id": 1, 
     "name": "Dolphins",
     "description": "Casco Miami Dolphins Retro.",
-    "detail": "Casco de los Miami Dolphins 90´s. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Riddell.",
+    "detail": "Miami Dolphins 90´s. Fabricado en policarbonato con rejilla de acero.",
     "price": 190,
     "image": "/img/dolphins.jpeg"
   },
@@ -41,9 +41,9 @@
   },
   {
     "id": 6,
-    "name": "Vikings",
+    "name": "Vikings", 
     "description": "Casco Minessota Vikings.",
-    "detail": "Casco de los Minessota Viking Home. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Xenith.",
+    "detail": "Minessota Viking Home. Fabricado en policarbonato con rejilla de acero.",
     "price": 190,
     "image": "/img/vikings.jpeg"
   }

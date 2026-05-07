@@ -4,13 +4,13 @@ import "./Cart.css";
 
 export const Cart = () => {
   
-  // Agregamos addToCart y decreaseQuantity que vienen del Context
+  
   const { cart, clearCart, getCartTotal, removeItem, addToCart, decreaseQuantity } = useCart();
 
   if (cart.length === 0) {
     return (
       <div className="empty-cart-msg">
-        <h2>EL CARRITO ESTÁ VACÍO</h2>
+        <h2>EL CARRITO ESTA VACIO</h2>
         <Link to="/" className="btn-back">Volver a los productos</Link>
       </div>
     );
@@ -29,7 +29,7 @@ export const Cart = () => {
             <div className="cart-item-info">
               <h3>{item.name}</h3>
               
-              {/* Selector de cantidad con botones + y - */}
+              {/* cantidad con botones + y - */}
               <div className="cart-qty-selector">
                 <button 
                   className="btn-qty" 
