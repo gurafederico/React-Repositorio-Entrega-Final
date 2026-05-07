@@ -32,15 +32,6 @@ body {
   --college: "Graduate", serif;
   --clarendon: "Ultra", serif;
   --impact: "Anton", sans-serif;
-
-  /* mapeo de variables */
-  --accent: var(--silver);
-  --accent-bg: var(--grey);
-  --accent-border: var(--red);
-  --border: var(--grey);
-  --text-h: var(--white);
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  --social-bg: var(--dark);
 }
 
 /* componentes globales */
@@ -48,22 +39,21 @@ body {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--silver);
+  background: var(--grey);
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
 
   &:hover {
-    border-color: var(--accent-border);
+    border-color: var(--red);
   }
   &:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--silver);
     outline-offset: 2px;
   }
 }
 
-/* seccion animada */
 .hero {
   position: relative;
 
@@ -110,16 +100,24 @@ body {
   place-content: center;
   place-items: center;
   flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
 }
 
 #next-steps {
   display: flex;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--grey);
   text-align: left;
 
   & > div {
     flex: 1 1 0;
     padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
   }
 
   .icon {
@@ -127,10 +125,20 @@ body {
     width: 22px;
     height: 22px;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 #docs {
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--grey);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--grey);
+  }
 }
 
 #next-steps ul {
@@ -140,11 +148,15 @@ body {
   gap: 8px;
   margin: 32px 0 0;
 
+  .logo {
+    height: 18px;
+  }
+
   a {
-    color: var(--text-h);
+    color: var(--white);
     font-size: 16px;
     border-radius: 6px;
-    background: var(--social-bg);
+    background: var(--dark);
     display: flex;
     padding: 6px 12px;
     align-items: center;
@@ -153,82 +165,57 @@ body {
     transition: box-shadow 0.3s;
 
     &:hover {
-      box-shadow: var(--shadow);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
     }
   }
 }
 
 #spacer {
   height: 88px;
-  border-top: 1px solid var(--border);
-}
-
-/* responsiva global */
-@media (max-width: 1100px) {
-  /* Contenedores de Detalle */
-  .detail-box,
-  .item-detail-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    margin: 20px auto;
-  }
-
-  /* secciones de contenido */
-  .image-side,
-  .info-side {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding: 20px;
-    text-align: center;
-  }
-
-  /* header & footer */
-  header,
-  footer {
-    height: auto;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  #next-steps {
-    flex-direction: column;
-  }
-
-  #docs {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-
-  #spacer {
+  border-top: 1px solid var(--grey);
+  @media (max-width: 1024px) {
     height: 48px;
   }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
-@media (max-width: 650px) {
-  .hero .base {
-    width: 130px;
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
   }
 
-  #next-steps ul {
-    flex-wrap: wrap;
-    justify-content: center;
+  &::before {
+    left: 0;
+    border-left-color: var(--grey);
   }
-
-  #next-steps ul li {
-    flex: 1 1 100%;
+  &::after {
+    right: 0;
+    border-right-color: var(--grey);
   }
 }

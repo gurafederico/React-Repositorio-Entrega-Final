@@ -1,89 +1,113 @@
-/* contenedor de fondo */
+/* ItemDetail.css */
+
 .detail-master-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: auto;
+  padding: 40px 20px;
 }
 
-/* tarjeta principal */
 .detail-box {
   background-color: var(--grey);
   border: 3px solid var(--red);
   border-radius: 20px;
-  max-width: 850px;
+  max-width: 950px;
   width: 100%;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .info-side {
   background-color: var(--navy);
-  padding: 25px;
-  text-align: center;
-  border-bottom: 2px solid var(--red);
+  padding: 30px;
+  flex: 0 0 300px; /* Ancho fijo para que no se achique */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px solid var(--red);
+  text-align: left;
 }
 
 .team-title {
   color: var(--gold);
-  font-family: var(--college);
-  letter-spacing: 2.5px;
+  font-family: var(--impact), sans-serif;
   font-size: 2.2rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .description-text {
   color: var(--silver);
-  font-family: var(--title);
-  letter-spacing: 2px;
-  font-size: 1.5rem;
+  font-family: var(--college), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
-/* cuerpo de la tarjeta */
-.product-card-mini {
+.card-side {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  padding: 40px;
-  gap: 40px;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mini-img {
-  flex: 1;
-  max-width: 350px;
+  max-width: 250px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
 }
 
 .mini-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  min-width: 200px;
 }
 
 .mini-price {
-  font-family: var(--college);
-  color: var(--red);
+  font-family: var(--impact), sans-serif;
+  color: var(--gold);
   font-size: 2rem;
-  font-weight: bold;
 }
 
-/* Contenedor de cantidad */
+/* controles de cantidad */
 .count-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
-  background: var(--gold);
-  padding: 10px;
-  border-radius: 8px;
-  width: fit-content;
+  gap: 10px;
+  width: 100%;
+}
+
+.count-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-count {
+  background: var(--red);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.count-controls span {
+  color: white;
+  font-family: var(--impact);
+  font-size: 1.2rem;
 }
 
 .btn-confirm {
@@ -91,54 +115,34 @@
   color: var(--white);
   font-family: var(--impact);
   font-size: 1.2rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 10px;
+  letter-spacing: 0.15rem;
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
   width: 100%;
-  margin-top: 10px;
-  box-shadow: 0 4px 0px #8b0000;
+  transition: 0.3s;
 }
 
 .btn-confirm:hover {
-  background-color: #ff3b3b;
-  transform: translateY(2px);
-  box-shadow: 0 2px 0px #8b0000;
-}
-
-.btn-confirm:active {
-  transform: translateY(4px);
-  box-shadow: 0 0px 0px #8b0000;
-}
-.count-container p {
-  color: var(--navy);
-  font-family: var(--title);
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0;
-  line-height: 1;
-  text-align: center;
+  background-color: var(--gold);
+  color: black;
 }
 
 /* responsivo */
-@media (max-width: 768px) {
-  .product-card-mini {
+@media (max-width: 850px) {
+  .detail-box {
     flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    max-width: 400px;
   }
-
-  .count-container {
-    margin: 0 auto;
+  .info-side {
+    flex: none;
+    border-right: none;
+    border-bottom: 2px solid var(--red);
   }
-
-  .btn-confirm {
-    max-width: 300px;
-    margin: 10px auto;
+  .card-side {
+    flex-direction: column;
+    gap: 20px;
   }
 }

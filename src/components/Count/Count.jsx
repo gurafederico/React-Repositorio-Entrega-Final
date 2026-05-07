@@ -1,34 +1,17 @@
-import { useState } from "react";
 import "./Count.css";
 
-export const Count = () => {
-  const [count, setCount] = useState(0);
-
-  // funciones para incrementar y decrementar
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  };
-
+// Recibimos stock y onAdd por props desde ItemDetail
+export const Count = ({ stock, onAdd }) => {
+  
   return (
-    <div className="count-container">
-      <button
-        className="btn primary"
-        onClick={decrement}
-        disabled={count === 0}
+    <div className="count-container-simple">
+      <button 
+        className="btn-confirm" 
+        // Ejecutamos onAdd mandando siempre 1 unidad por defecto
+        onClick={() => onAdd(1)} 
+        disabled={stock <= 0}
       >
-        -
-      </button>
-
-      <p>Cantidad: {count}  </p>
-
-      <button className="btn primary" onClick={increment}>
-        +
+        {stock <= 0 ? "SIN STOCK" : "AGREGAR AL CARRITO 🛒"}
       </button>
     </div>
   );
