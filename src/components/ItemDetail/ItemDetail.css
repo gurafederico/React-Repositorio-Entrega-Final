@@ -1,20 +1,21 @@
-/* ItemDetail.css */
+/* ItemDetail.css*/
 
 section h1 {
   font-family: var(--college), sans-serif;
   color: var(--gold);
   font-weight: 1000;
-  letter-spacing: 0.2rem;
-  margin-bottom: 15px;
+  letter-spacing: 0.15rem;
+  margin-bottom: 12px;
   border-bottom: 2px solid var(--silver);
 
   text-shadow:
     1px 1px 0px var(--grey),
     2px 2px 0px var(--grey),
-    3px 3px 0px var(--grey),
-    4px 4px 0px var(--navy);
+    2px 2px 0px var(--grey),
+    3px 3px 0px var(--navy);
 
   text-transform: uppercase;
+  font-size: 1.8rem;
 }
 
 .detail-master-container {
@@ -22,25 +23,25 @@ section h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 25px 15px;
 }
 
 .detail-box {
   background-color: var(--grey);
   border: 3px solid var(--red);
-  border-radius: 20px;
-  max-width: 950px;
+  border-radius: 15px;
+  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .info-side {
   background-color: var(--navy);
-  padding: 30px;
-  flex: 0 0 300px;
+  padding: 20px;
+  flex: 0 0 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,18 +52,18 @@ section h1 {
 .team-title {
   color: var(--gold);
   font-family: var(--impact), sans-serif;
-  font-size: 2.2rem;
-  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .description-text {
   color: var(--silver);
   font-family: var(--college), sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  letter-spacing: 0.04rem;
+  line-height: 1.3;
 }
 
 .card-side {
@@ -70,16 +71,16 @@ section h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 20px;
+  gap: 25px;
+  padding: 15px;
   background-color: var(--grey);
 }
 
 .mini-img {
-  max-width: 250px;
+  max-width: 190px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4));
 }
 
 .mini-content {
@@ -87,23 +88,23 @@ section h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  min-width: 200px;
+  gap: 20px;
+  min-width: 160px;
 }
 
 .mini-price {
   font-family: var(--impact), sans-serif;
   color: var(--gold);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .btn-confirm {
   background-color: var(--navy);
   color: var(--white);
   font-family: var(--impact);
-  font-size: 1.2rem;
-  letter-spacing: 0.2rem;
-  padding: 12px 20px;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  padding: 10px 16px; /* Reducido */
   border: 1px solid var(--gold);
   border-radius: 5px;
   cursor: pointer;
@@ -120,19 +121,19 @@ section h1 {
 .confirmacion-agregado {
   background-color: var(--navy);
   color: var(--gold);
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid var(--silver);
   text-align: center;
-  margin-top: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
   animation: fadeInOut 2.5s ease-in-out;
 }
 
 .confirmacion-agregado p {
   margin: 0;
   font-family: var(--college), sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: bold;
 }
 
@@ -159,15 +160,16 @@ section h1 {
 @media (max-width: 850px) {
   .detail-box {
     flex-direction: column;
-    max-width: 400px;
+    max-width: 350px;
   }
   .info-side {
     flex: none;
     border-right: none;
     border-bottom: 2px solid var(--red);
+    padding: 15px;
   }
   .card-side {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 }
