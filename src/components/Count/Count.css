@@ -7,7 +7,6 @@
 }
 
 .count-container p {
-  /* texto p */
   font-family: var(--clarendon);
   color: var(--blue);
   font-size: 1.2rem;
@@ -17,7 +16,6 @@
   margin: 0;
 }
 
-/* botones de + y - */
 .count-container button {
   background-color: var(--grey);
   color: white;
@@ -40,7 +38,6 @@
   transform: scale(1.05);
 }
 
-/* el # de la seleccion */
 .count-container span {
   color: var(--grey);
   font-family: var(--title);

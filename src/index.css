@@ -8,13 +8,8 @@
 
 body {
   background-color: var(--navy);
-
-  color: var(--red);
-
-  font-family: var(--title), sans-serif;
-
-  background-image:
-    linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)),
+    background-image:
+    linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)), /*efectos y sombreado */
     url("/img/fondo.jpg");
 
   background-size: cover;
@@ -62,7 +57,7 @@ h1 {
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  border: 1px solid var(--black) (255, 255, 255, 0.1);
+  border: 1px solid var(--black);
   cursor: pointer;
   font-family: var(--title);
   text-transform: uppercase;
@@ -73,7 +68,7 @@ h1 {
 
 .btn:hover {
   background-color: var(--red);
-  box-shadow: 0 0 8px rgba(213, 10, 10, 0.3);
+  box-shadow: 0 0 8px var(--red);
 }
 
 .btn:disabled {

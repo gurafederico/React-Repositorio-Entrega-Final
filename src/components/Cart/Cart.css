@@ -11,8 +11,8 @@
 
 .cart-container {
   max-width: 750px;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 15px auto;
+  padding: 5px;
   background-color: var(--dark) !important;
   border: 2px solid var(--red) !important;
   border-radius: 12px;
@@ -23,50 +23,54 @@
 .cart-title {
   color: var(--gold) !important;
   font-family: var(--impact), sans-serif !important;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 4px;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid var(--red);
-  padding-bottom: 12px;
-  margin-bottom: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  margin-bottom: 12px;
+  padding: 5px;
+  margin-bottom: 6px;
   background-color: var(--grey);
-  border: 1px solid var(--grey);
-  border-radius: 8px;
+  border: 2px solid var(--grey);
+  border-radius: 20px;
   transition: transform 0.3s ease;
 }
 
 .cart-item:hover {
   transform: scale(1.01);
-  border-color: var(--white);
+  border-color: var(--silver);
 }
 
 .cart-img-mini {
-  width: 80px;
+  width: 70px;
   height: auto;
   object-fit: contain;
 }
 
 .cart-item-info {
   flex: 1;
-  padding: 0 15px;
+  padding: 0.5px;
 }
 
 .cart-item-info h3 {
-  color: var(--silver) !important;
-  font-family: var(--impact), sans-serif !important;
+  color: var(--gold) !important;
+  font-family: var(--college), sans-serif !important;
   font-size: 1.2rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 6px;
+  margin-left: 2px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   text-transform: uppercase;
-  margin: 0;
+  
 }
 
 .cart-qty-selector {
@@ -89,6 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .btn-qty:hover {
@@ -229,7 +234,7 @@
 
 .btn-back {
   display: inline-block;
-  background-color: var(--red);
+  background-color: var(--navy);
   color: var(--white) !important;
   font-family: var(--impact), sans-serif;
   letter-spacing: 3px;

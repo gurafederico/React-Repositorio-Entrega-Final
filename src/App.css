@@ -1,5 +1,5 @@
 /*importacion fuentes */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Graduate&family=Ultra&family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Graduate&family=Tourney:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap");
 
 /* reset global */
 * {
@@ -18,21 +18,24 @@ body {
 /* var de entorno*/
 :root {
   /* colores*/
-  --navy: #013369;
+  --navy: #030157;
   --red: #d50a0a;
   --white: #ffffff;
   --silver: #a5acaf;
   --dark: #101820;
   --grey: #333333;
   --gold: #b3995d;
-  --blue: #0b162a;
-  --black: #000000;
+  --blue: #272581e5;
+  --black: #000000af;
+  --deepblue: #00141ecc;
+  --steel: #708090;
 
   /* fuentes */
-  --title: "Chakra Petch", sans-serif;
-  --college: "Graduate", serif;
-  --clarendon: "Ultra", serif;
-  --impact: "Anton", sans-serif;
+  --title: "Tourney";
+  --college: "Graduate";
+  --clarendon: "Ultra";
+  --impact: "Anton";
+  --nav: "Exo2";
 }
 
 /* componentes globales */
@@ -166,7 +169,7 @@ body {
     transition: box-shadow 0.3s;
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 12px var(--black);
     }
     .button-icon {
       height: 16px;

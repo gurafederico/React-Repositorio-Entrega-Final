@@ -1,4 +1,4 @@
-import { useCart } from "../Context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import "./Cart.css"; 
 
@@ -11,7 +11,7 @@ export const Cart = () => {
     return (
       <div className="empty-cart-msg">
         <h2>EL CARRITO ESTA VACIO</h2>
-        <Link to="/" className="btn-back">Volver a los productos</Link>
+        <Link to="/" className="btn-back"> 🏃‍♂️ Explorar la Tienda 🏃‍♂️</Link>
       </div>
     );
   }
@@ -72,7 +72,7 @@ export const Cart = () => {
           
           <button 
             className="btn-checkout" 
-            onClick={() => alert("¡Pedido procesado! Touchdown 🏈")}
+            onClick={() => alert(" 🏈 ¡ Tu Pedido fue procesado! 📦")}
           >
             FINALIZAR COMPRA
           </button>
