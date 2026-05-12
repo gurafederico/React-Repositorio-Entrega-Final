@@ -1,4 +1,4 @@
-import { useState } from "react"; // Importamos el hook
+import { useState } from "react"; 
 import { Count } from "../Count/Count";
 import "./ItemDetail.css"; 
 import { useCart } from "../Context/CartContext";
@@ -59,7 +59,7 @@ export const ItemDetail = ({ item }) => {
             {/* cartel si se hace click en el boton dea agregar */}
             {agregado && (
               <div className="confirmacion-agregado">
-                <p>🏈 ¡Sumaste el producto al carrito! 🏈</p>
+                <p>🏈¡Sumaste el producto al carrito!🏈</p>
               </div>
             )}
           </div>

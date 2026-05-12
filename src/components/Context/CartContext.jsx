@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
-    // Tip: Si los IDs vienen de base de datos como strings, mejor usar String()
+    
     const itemInCart = cart.find(item => String(item.id) === String(product.id));
     
     if (itemInCart) {
