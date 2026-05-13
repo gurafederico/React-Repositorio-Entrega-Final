@@ -55,8 +55,8 @@ export const Cart = () => {
             </div>
 
             <div className="cart-item-price">
-              <p className="price-unit">PRECIO: US$ {item.price}</p>
-              <p className="price-subtotal">SUBTOTAL: US$ {item.price * item.quantity}</p>
+              <p className="price-unit">Precio Unitario: US$ {item.price}</p>
+              <p className="price-subtotal">Subtotal: US$ {item.price * item.quantity}</p>
             </div>
           </div>
         ))}
