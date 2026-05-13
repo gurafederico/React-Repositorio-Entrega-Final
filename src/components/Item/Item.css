@@ -57,7 +57,7 @@
 }
 
 .card h3 {
-  color: var(--red);
+  color: var(--gold);
   font-family: var(--college), sans-serif;
   font-weight: 900;
   letter-spacing: 3px;
@@ -70,7 +70,7 @@
 }
 
 .card p {
-  color: var(--gold);
+  color: var(--silver);
   font-family: var(--college), sans-serif;
   font-weight: 700;
   letter-spacing: 1.2px;

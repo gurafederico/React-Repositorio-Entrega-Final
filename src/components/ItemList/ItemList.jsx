@@ -4,7 +4,7 @@ import "./ItemList.css";
 
 export const ItemList = ({ products }) => {
   if (!products.length) {
-    return <p>No hay productos</p>;
+    return <p> No hay productos </p>;
   }
 
   return (
