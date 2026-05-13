@@ -16,6 +16,16 @@
   display: block;
 }
 
+.error-message {
+  color: var(--red);
+  font-family: var(--college), serif;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1100px) {
   .products-container {
     grid-template-columns: repeat(2, 1fr);

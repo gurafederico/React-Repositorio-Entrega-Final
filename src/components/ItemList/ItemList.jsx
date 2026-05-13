@@ -3,8 +3,9 @@ import { Item } from "../Item/Item";
 import "./ItemList.css";
 
 export const ItemList = ({ products }) => {
-  if (!products.length) {
-    return <p> No hay productos </p>;
+  /* si viene vacio el array */
+  if (products.length === 0) {
+    return <p className="error-message">No hay productos</p>;
   }
 
   return (
