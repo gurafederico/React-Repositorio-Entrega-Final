@@ -1,4 +1,5 @@
-.NavList {
+/*nav.module.css*/
+.nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -8,17 +9,68 @@
   padding: 0;
 }
 
-.NavItem {
-  font-size: 0.9rem;
-  font-family: var(--special), sans-serif;
-  font-weight: 700;
+.nav-list li {
+  font-size: 1.2rem;
+  font-family: var(--college), sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--red);
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-.NavItem:hover {
-  color: var(--red);
-  transform: scale(1.05);
+.nav-list li a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 6px;
+}
+
+.nav-list li a span {
+  display: inline-block;
+  transform: translateY(-2px);
+  line-height: 0;
+}
+
+.nav-list li:hover {
+  color: var(--silver);
+  transform: translateY(-1px);
+}
+
+.nav-list li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--navy);
+  transition: width 0.3s ease;
+}
+
+.nav-list li:hover::after {
+  width: 100%;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .nav-list li {
+    font-size: 1rem;
+  }
+
+  .nav-list li:hover {
+    transform: none;
+  }
+
+  .nav-list li::after {
+    display: none;
+  }
 }

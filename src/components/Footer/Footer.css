@@ -1,3 +1,4 @@
+/* footer.css */
 footer {
   background-color: var(--dark);
   color: var(--white);
@@ -8,6 +9,8 @@ footer {
   align-items: center;
   gap: 10px;
   text-align: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer p {
@@ -25,7 +28,8 @@ footer p {
   list-style: none;
   padding: 0;
 }
-
+/* mi texto es estatico sin link asociados */
+/*
 .nav-list li {
   color: var(--red);
   font-size: 0.75rem;
@@ -36,5 +40,23 @@ footer p {
 }
 
 .nav-list li:hover {
-  color: solid var(--red);
+  color: var(--red);
+}
+*/
+/* responsivo */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
 }

@@ -191,6 +191,9 @@ section h1 {
 
 /* responsivo */
 @media (max-width: 850px) {
+  .detail-master-container {
+    padding: 20px 15px;
+  }
   .detail-box {
     flex-direction: column;
     max-width: 450px;

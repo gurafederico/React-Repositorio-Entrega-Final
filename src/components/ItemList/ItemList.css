@@ -8,6 +8,7 @@
   max-width: 1000px;
   padding: 15px;
   width: 100%;
+  min-height: 200px;
 }
 
 .products-container a {
@@ -21,6 +22,7 @@
   font-family: var(--college), serif;
   font-size: 1.1rem;
   text-align: center;
+  margin-top: 40px;
   margin-top: 20px;
   font-weight: bold;
   text-transform: uppercase;
@@ -37,5 +39,7 @@
   .products-container {
     grid-template-columns: 1fr;
     padding: 10px;
+    margin: 15px auto;
+    justify-items: center;
   }
 }

@@ -8,14 +8,16 @@
 
 body {
   background-color: var(--navy);
-    background-image:
-    linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)), /*efectos y sombreado */
+  background-image:
+    /*efectos y sombreado */
+    linear-gradient(rgba(16, 24, 32, 0.85), rgba(16, 24, 32, 0.85)),
     url("/img/fondo.jpg");
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 #root {
@@ -29,6 +31,8 @@ main {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+
+  padding: 0 20px;
 }
 
 h1 {
@@ -85,4 +89,21 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    padding: 10px 0;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
