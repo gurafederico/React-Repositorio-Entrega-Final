@@ -191,13 +191,13 @@ section h1 {
 
 /* responsivo */
 @media (max-width: 850px) {
-  ..detail-master-container {
+  .detail-master-container {
     padding: 20px 15px;
-    display: flex;       
-    flex-direction: column; 
-    align-items: center; 
-    min-height: auto;    
-    width: 100%;         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    width: 100%;
     overflow: hidden;
   }
   .detail-box {

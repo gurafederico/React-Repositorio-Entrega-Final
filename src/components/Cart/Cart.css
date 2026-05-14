@@ -12,7 +12,7 @@
 
 .cart-container {
   max-width: 750px;
-  margin: 15px auto;
+  margin: 10px auto 100px auto;
   padding: 5px;
   background-color: var(--dark) !important;
   border: 2px solid var(--red) !important;
@@ -261,7 +261,7 @@
 @media (max-width: 768px) {
   .cart-container {
     width: 95%;
-    margin: 10px auto;
+    margin: 10px auto 100px auto;
     padding: 15px;
   }
 
