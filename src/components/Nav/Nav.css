@@ -21,6 +21,20 @@
   position: relative;
 }
 
+/* ============================================================ */
+/* DISEÑO PROPIO PARA HOME (Primer li) */
+.nav-list li:first-child a {
+  color: var(--white); /* Ejemplo: Home en blanco */
+  /* Agregá acá cualquier otro diseño para Home */
+}
+
+/* DISEÑO PROPIO PARA CARRITO (Segundo li) */
+.nav-list li:last-child a {
+  color: var(--red); /* Ejemplo: Carrito en rojo */
+  /* Agregá acá cualquier otro diseño para Carrito */
+}
+/* ============================================================ */
+
 .nav-list li a {
   display: inline-flex;
   align-items: center;
@@ -78,6 +92,7 @@
   .nav-list li::after {
     display: none;
   }
+
   .cart-badge {
     background-color: var(--red);
     color: var(--white);

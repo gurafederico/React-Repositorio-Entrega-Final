@@ -4,9 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 30px;
-  background-color: var(--grey);
-  border-bottom: 2px solid var(--red);
+  padding: 4px 30px;
+  background-color: var(--grey) !important;
+  border-bottom: 2px dotted var(--red) !important;
 }
 
 .LogoContainer {
@@ -29,7 +29,7 @@
 }
 
 .HeaderTitle {
-  font-family: var(--clarendon);
+  font-family: var(--clarendon) !important;
   font-weight: 200;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -37,20 +37,12 @@
   letter-spacing: 5px;
   font-style: italic;
   color: var(--red);
-  text-shadow: 2px 2px 0px var(--navy);
-  transition: all 0.3s ease;
-  display: inline-block;
-
-  /* efecto*/
   text-shadow:
     0 0 8px var(--red),
     2px 2px 2px var(--black);
-
   transition: all 0.3s ease;
   display: inline-block;
 }
-
-/* efectos */
 
 .LogoContainer:hover img {
   transform: scale(1.05);
@@ -61,7 +53,32 @@
   filter: drop-shadow(0 0 10px solid var(--red));
 }
 
+/* carrito y home*/
+
+.Header nav .nav-list li:first-child a {
+  color: var(--gold) !important;
+  font-family: var(--impact) !important;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+}
+
+.Header nav .nav-list li:last-child a {
+  color: var(--gold) !important;
+  font-family: var(--impact) !important;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+}
+
+.Header nav .nav-list li:first-child a:hover {
+  color: var(--silver) !important;
+}
+
+.Header nav .nav-list li:last-child a:hover {
+  color: var(--silver) !important;
+}
+
 /* responsivo */
+
 @media (max-width: 768px) {
   .Header {
     flex-direction: column;
@@ -77,6 +94,26 @@
   }
 
   .HeaderTitle {
-    font-size: 1.8rem;
+    font-size: 1.4rem; 
+    letter-spacing: 3px; /
+  }
+
+  
+  .Header nav .nav-list {
+    flex-direction: row; 
+    gap: 20px; 
+    justify-content: center;
+  }
+
+  .Header nav .nav-list li:first-child a,
+  .Header nav .nav-list li:last-child a {
+    font-size: 0.9rem; 
+    letter-spacing: 2px;
+  }
+
+  
+  .cart-badge {
+    font-size: 0.6rem;
+    padding: 1px 5px;
   }
 }
