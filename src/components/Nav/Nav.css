@@ -29,6 +29,10 @@
   gap: 6px;
 }
 
+.nav-list li:hover a {
+  color: var(--silver) !important;
+}
+
 .nav-list li a span {
   display: inline-block;
   transform: translateY(-2px);

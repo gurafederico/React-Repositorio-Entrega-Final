@@ -4,23 +4,24 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1000; 
+  z-index: 1000;
   background-color: var(--dark);
   color: var(--white);
   border-top: 2px solid var(--red);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  box-sizing: border-box; 
-  padding: 6px 10px; 
-  gap: 4px;          
+  box-sizing: border-box;
+  padding: 5px 10px;
+  gap: 4px;
 }
 
 footer p {
   color: var(--silver);
   font-family: var(--college);
-  font-size: 0.75rem; 
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   margin: 0;
@@ -28,28 +29,85 @@ footer p {
 
 .nav-list {
   display: flex;
-  gap: 12px; 
+  gap: 12px;
   list-style: none;
   padding: 0;
-  margin: 0; 
+  margin: 0;
 }
+
+.nav-list li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--college);
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease;
+}
+/* color instagram */
+footer .nav-list li:nth-child(1) a:hover {
+  color: #e1306c !important;
+  opacity: 1;
+}
+
+/* color whatsApp */
+footer .nav-list li:nth-child(2) a:hover {
+  color: #25d366 !important;
+  opacity: 1;
+}
+
+footer .nav-list li:hover {
+  color: inherit !important;
+  transform: none !important;
+}
+
+.social-icon {
+  font-size: 1rem;
+}
+
+/* responsivo */
 
 /* responsivo */
 @media (max-width: 768px) {
   footer {
-
-    padding: 10px 10px;
-    gap: 6px;
-  }
-
-  .nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+    padding: 4px 12px;
+    gap: 5px;
+    height: auto;
+    min-height: 40px;
   }
 
   footer p {
-    font-size: 0.65rem;
-    letter-spacing: 1px;
+    font-size: 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0;
+    flex: 1;
+  }
+
+  .nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    font-size: 0.55rem;
+    white-space: nowrap;
+    gap: 4px;
+  }
+
+  .social-icon {
+    font-size: 0.8rem;
   }
 }
