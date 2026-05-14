@@ -11,7 +11,7 @@ export const Item = ({ name, description, price, image, children }) => {
       <p className="description">{description}</p>
       
       {/* $ en dolares */}
-      <p className="price">US$ {price}</p>
+      <p className="price">Us$ {price}</p>
       
       {children}
     </article>
