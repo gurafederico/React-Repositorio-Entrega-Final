@@ -21,19 +21,13 @@
   position: relative;
 }
 
-/* ============================================================ */
-/* DISEÑO PROPIO PARA HOME (Primer li) */
 .nav-list li:first-child a {
-  color: var(--white); /* Ejemplo: Home en blanco */
-  /* Agregá acá cualquier otro diseño para Home */
+  color: var(--white);
 }
 
-/* DISEÑO PROPIO PARA CARRITO (Segundo li) */
 .nav-list li:last-child a {
-  color: var(--red); /* Ejemplo: Carrito en rojo */
-  /* Agregá acá cualquier otro diseño para Carrito */
+  color: var(--red);
 }
-/* ============================================================ */
 
 .nav-list li a {
   display: inline-flex;
