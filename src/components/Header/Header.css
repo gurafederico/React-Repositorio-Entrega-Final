@@ -94,24 +94,22 @@
   }
 
   .HeaderTitle {
-    font-size: 1.4rem; 
-    letter-spacing: 3px; /
+    font-size: 1.4rem;
+    letter-spacing: 3px;
   }
 
-  
   .Header nav .nav-list {
-    flex-direction: row; 
-    gap: 20px; 
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
   }
 
   .Header nav .nav-list li:first-child a,
   .Header nav .nav-list li:last-child a {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     letter-spacing: 2px;
   }
 
-  
   .cart-badge {
     font-size: 0.6rem;
     padding: 1px 5px;
