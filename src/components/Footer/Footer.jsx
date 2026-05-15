@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 export const Footer = () => {
   return (
     <footer className="footer-container">
-      <p>© 2026 NFL Goods Store Argentina &trade; |</p>
+      <p>© 2026 Gridiron Store Argentina &trade; |</p>
       <nav>
         <ul className="nav-list">
           <li>
