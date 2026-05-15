@@ -233,15 +233,31 @@ section h1 {
 
 @media (max-width: 480px) {
   .detail-master-container {
-    padding: 15px 10px;
+    padding: 10px 5px !important;
+    width: 100vw !important;
   }
 
   .detail-box {
+    width: 95% !important;
+    max-width: 95% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px !important;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-side,
+  .card-side {
     width: 100% !important;
-    max-width: 100%;
+    padding: 15px 10px !important;
   }
 
   .description-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 }
