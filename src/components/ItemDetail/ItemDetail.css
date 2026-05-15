@@ -190,7 +190,8 @@ section h1 {
 }
 
 /* responsivo */
-@media (max-width: 850px) {
+
+@media (max-width: 768px) {
   .detail-master-container {
     padding: 20px 15px;
     display: flex;
@@ -198,8 +199,11 @@ section h1 {
     align-items: center;
     min-height: auto;
     width: 100%;
+    min-height: 100vh;
     overflow: hidden;
+    box-sizing: border-box;
   }
+
   .detail-box {
     display: flex;
     flex-direction: column;
@@ -209,19 +213,36 @@ section h1 {
     height: auto;
     align-items: center;
   }
+
   .info-side {
     flex: none;
     border-right: none;
     border-bottom: 1px solid var(--red);
-    padding: 2px;
+    padding: 10px 2px;
   }
+
   .card-side {
     flex-direction: column;
     gap: 15px;
   }
+
   .description-text {
     color: var(--silver);
     font-family: var(--college), sans-serif;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-master-container {
+    padding: 15px 10px;
+  }
+
+  .detail-box {
+    max-width: 100%;
+  }
+
+  .description-text {
     font-size: 0.9rem;
   }
 }
