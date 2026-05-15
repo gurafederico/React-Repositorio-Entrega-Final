@@ -20,7 +20,7 @@
 
 .count-container button {
   background-color: var(--grey);
-  color: white;
+  color: var(--silver);
   border: 1px solid var(--red);
   width: 30px;
   height: 30px;
@@ -54,4 +54,39 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+/* responsivo */
+
+@media (max-width: 750px) {
+  .count-container {
+    justify-content: center;
+    margin: 1.2rem 0;
+    gap: 12px;
+  }
+
+  .count-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .count-container {
+    gap: 10px;
+  }
+
+  .count-container button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .count-container p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .count-container span {
+    font-size: 1.1rem;
+    min-width: 20px;
+  }
 }

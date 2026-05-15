@@ -13,32 +13,19 @@
 .nav-list li {
   font-size: 1.2rem;
   font-family: var(--college), sans-serif;
+
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--red);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-}
-
-.nav-list li:first-child a {
-  color: var(--white);
-}
-
-.nav-list li:last-child a {
-  color: var(--red);
 }
 
 .nav-list li a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: inherit;
   gap: 6px;
-}
-
-.nav-list li:hover a {
-  color: var(--silver) !important;
 }
 
 .nav-list li a span {
@@ -48,7 +35,6 @@
 }
 
 .nav-list li:hover {
-  color: var(--silver);
   transform: translateY(-1px);
 }
 
@@ -66,11 +52,28 @@
 .nav-list li:hover::after {
   width: 100%;
 }
+.cart-badge {
+  background-color: var(--black);
+  color: var(--silver);
+  display: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px !important;
+  min-width: 24px;
+  height: 24px;
+  font-size: 0.85rem !important;
+  padding: 10px;
+  margin-left: 5px;
+  font-family: var(--college), sans-serif;
+  font-weight: 900;
+  vertical-align: middle;
+  line-height: 1;
+}
 
 /* responsivo */
 @media (max-width: 768px) {
   .nav-list {
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
     padding: 10px 0;
   }
@@ -88,13 +91,14 @@
   }
 
   .cart-badge {
-    background-color: var(--red);
-    color: var(--white);
-    font-size: 0.8rem;
-    padding: 2px 6px;
-    border-radius: 50%;
-    margin-left: 5px;
+    background-color: var(--black);
+    border-radius: 999px !important;
+    color: var(--silver);
+    font-size: 1rem !important;
+    padding: 10px;
+    margin-left: 1px;
     vertical-align: middle;
-    font-family: sans-serif;
+    font-family: var(--college), sans-serif;
+    font-weight: 800;
   }
 }

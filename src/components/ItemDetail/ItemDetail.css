@@ -192,44 +192,42 @@ section h1 {
 /* responsivo */
 
 @media (max-width: 768px) {
-  .detail-master-container {
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: auto;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    box-sizing: border-box;
+  .detail-master-container,
+  main {
+    display: block !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    padding-bottom: 75px !important;
+    left: 0;
   }
 
   .detail-box {
     display: flex;
     flex-direction: column;
-    max-width: 450px;
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
+    width: 90% !important;
+    max-width: 420px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 40px;
+    float: none !important;
     align-items: center;
+    box-sizing: border-box;
+  }
+
+  .detail-title,
+  h1 {
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px 0;
   }
 
   .info-side {
-    flex: none;
-    border-right: none;
-    border-bottom: 1px solid var(--red);
-    padding: 10px 2px;
-  }
-
-  .card-side {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .description-text {
-    color: var(--silver);
-    font-family: var(--college), sans-serif;
-    font-size: 0.95rem;
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 2px solid var(--red);
   }
 }
 
@@ -239,6 +237,7 @@ section h1 {
   }
 
   .detail-box {
+    width: 100% !important;
     max-width: 100%;
   }
 

@@ -186,7 +186,7 @@ body {
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     margin-top: 15px;
     flex-wrap: wrap;
     justify-content: center;

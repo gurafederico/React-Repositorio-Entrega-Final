@@ -99,11 +99,15 @@ a {
   }
 
   main {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
   }
 }

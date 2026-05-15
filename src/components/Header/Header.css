@@ -55,26 +55,21 @@
 
 /* carrito y home*/
 
-.Header nav .nav-list li:first-child a {
-  color: var(--gold) !important;
+.Header nav .nav-list li a {
+  color: var(--silver) !important;
   font-family: var(--impact) !important;
   font-size: 1.1rem;
   letter-spacing: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.Header nav .nav-list li:last-child a {
-  color: var(--gold) !important;
-  font-family: var(--impact) !important;
-  font-size: 1.1rem;
-  letter-spacing: 3px;
-}
-
-.Header nav .nav-list li:first-child a:hover {
-  color: var(--silver) !important;
-}
-
-.Header nav .nav-list li:last-child a:hover {
-  color: var(--silver) !important;
+.Header nav .nav-list li a:hover {
+  color: var(--red) !important;
+  text-shadow: 0 0 5px var(--red);
 }
 
 /* responsivo */
@@ -82,20 +77,20 @@
 @media (max-width: 768px) {
   .Header {
     flex-direction: column;
-    padding: 15px 10px;
+    padding: 5px 10px;
     gap: 15px;
     text-align: center;
   }
 
   .LogoContainer {
-    height: 50px;
+    height: 65px;
     justify-content: center;
     width: 100%;
   }
 
   .HeaderTitle {
-    font-size: 1.4rem;
-    letter-spacing: 3px;
+    font-size: 1.75rem;
+    letter-spacing: 5px;
   }
 
   .Header nav .nav-list {
@@ -104,14 +99,8 @@
     justify-content: center;
   }
 
-  .Header nav .nav-list li:first-child a,
-  .Header nav .nav-list li:last-child a {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-  }
-
-  .cart-badge {
-    font-size: 0.6rem;
-    padding: 1px 5px;
+  .Header nav .nav-list li a {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 }
