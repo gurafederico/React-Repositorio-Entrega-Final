@@ -1,6 +1,7 @@
 [
   {
-    "id": 1, 
+    "id": 1,
+    "category": "Cascos", 
     "name": "Dolphins",
     "description": "Casco Miami Dolphins Retro.",
     "detail": "Casco de los Miami Dolphins 90´s. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Riddel",
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "category": "Cascos", 
     "name": "Green Bay",
     "description": "Casco Green Bay Packers.",
     "detail": "Casco de los Green Bay Packers Home edition. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Riddell.",
@@ -17,6 +19,7 @@
   },
   {
     "id": 3,
+    "category": "Cascos", 
     "name": "Lions",
     "description": "Casco Detroit Lions.",
     "detail": "Casco de los Detroit Lions Home. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Schutt.",
@@ -25,6 +28,7 @@
   },
   {
     "id": 4,
+    "category": "Cascos", 
     "name": "SF49",
     "description": "Casco San Francisco 49ers.",
     "detail": " Casco de los San Francisco 49ers Gold Home . Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Vicis.",
@@ -33,6 +37,7 @@
   },
   {
     "id": 5,
+    "category": "Cascos", 
     "name": "Steelers",
     "description": "Casco Pittsburgh Steelers.",
     "detail": "Casco de los Pittsburgh Steelers 80´s edition. Fabricado en policarbonato con rejilla de acero. Bajo licencia oficial de Riddell.",
@@ -41,6 +46,7 @@
   },
   {
     "id": 6,
+    "category": "Cascos", 
     "name": "Vikings", 
     "description": "Casco Minessota Vikings.",
     "detail": "Casco de los Minessota Viking Home. Fabricado en policarbonato con rejilla de acero.Bajo licencia oficial de Xenith",

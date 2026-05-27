@@ -3,8 +3,9 @@ import "./Nav.css";
 import { useCart } from "../../Context/CartContext";
 
 export const Nav = () => {
-  
   const { getCartQuantity } = useCart();
+
+  const totalItems = getCartQuantity();
 
   return (
     <nav>
@@ -16,8 +17,8 @@ export const Nav = () => {
           <Link to={"/carrito"}>
             
             CARRITO <span>🛒</span>
-            {getCartQuantity() > 0 && (
-              <span className="cart-badge">{getCartQuantity()}</span>
+            {totalItems > 0 && (
+              <span className="cart-badge">{totalItems}</span>
             )}
           </Link>
         </li>
