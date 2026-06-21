@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { useAuth } from "../../context/AuthContext"
+import { useAuth } from "../../Context/AuthContext"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
-    const {login} = useAuth()
-    const navigate = useNavigate()
-    const [formData, setFormData] = useState({
+  const { login } = useAuth()
+  const navigate = useNavigate()
+  const [formData, setFormData] = useState({
     email: "",
     password: "",
   })
@@ -17,7 +17,7 @@ export const Login = () => {
   };
 
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -33,7 +33,7 @@ export const Login = () => {
     }
 
   }
-   return (
+  return (
     <form onSubmit={handleSubmit} className="login-form">
       <h2>Iniciar sesión</h2>
 
