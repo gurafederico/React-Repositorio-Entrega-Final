@@ -1,29 +1,33 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
-import { getByCategory, getProducts } from "../../services/productsService";
+import { getProducts } from "../../services/productsService";
 import { useParams } from "react-router-dom";
+import "../../App.css";
 
 export const ItemListContainer = () => {
-  //tomamos "category" del useParams para poder filtrar
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  //Con el JSON LOCAL
   useEffect(() => {
     setLoading(true);
 
-    //Usanmos la funcion con 2 uso: trae todo o filtra si category existe
-    getByCategory(category)
+    //getProducts consulta con firestore pasando la categoria
+    getProducts(category)
       .then((data) => setProducts(data))
-      .catch((err) => console.log("Hubo un error:", err))
+      .catch((err) => console.log("Error al traer datos de Firestore:", err))
       .finally(() => setLoading(false));
   }, [category]);
-  
-  if (loading) return <p>Cargando...</p>;
+
+  if (loading) return <p className="loading-text">Cargando Gridiron Store...</p>;
 
   return (
-    <section>
+    <section className="store-section">
+      {/*titulo dinamico sigue dependiendo de los seleccionado en URL */}
+      <h2 className="category-title">
+        {category ? category.toUpperCase() : "TODOS LOS PRODUCTOS"}
+      </h2>
+
       <ItemList products={products} />
     </section>
   );

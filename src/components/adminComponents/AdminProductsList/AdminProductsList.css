@@ -1,0 +1,162 @@
+/* adminproductslist.css */
+
+.admin-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--steel);
+  font-family: var(--college);
+}
+
+.admin-list-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--silver);
+  font-family: var(--college);
+}
+
+.btn-back {
+  background-color: var(--gold);
+  font-family: var(--college);
+  color: var(--silver);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #374151;
+}
+
+/* tabla */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--deepblue);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+
+.admin-table th {
+  background-color: var(--grey);
+  font-family: var(--college);
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.admin-table tr:hover {
+  background-color: var(--gold);
+}
+
+/* imagen en miniatura */
+.admin-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+}
+
+/* botones de accion */
+.btn-edit {
+  background-color: var(--navy);
+  font-family: var(--college);
+  color: var(--silver);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.btn-edit:hover {
+  background-color: var(--red);
+}
+
+.btn-delete {
+  background-color: var(--red);
+  font-family: var(--college);
+  color: var(--silver);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-delete:hover {
+  background-color: var(--steel);
+}
+@media (max-width: 768px) {
+  .admin-list-container {
+    padding: 10px;
+  }
+
+  .admin-list-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .admin-table, 
+  .admin-table thead, 
+  .admin-table tbody, 
+  .admin-table th, 
+  .admin-table td, 
+  .admin-table tr {
+    display: block;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .admin-table td {
+    border: none;
+    padding: 8px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px dashed #374151;
+  }
+
+  .admin-table td:last-child {
+    border-bottom: none;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .btn-edit, .btn-delete {
+    padding: 8px 16px;
+    margin: 4px;
+  }
+}

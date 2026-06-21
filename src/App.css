@@ -32,7 +32,7 @@ body {
   --white: #ffffff;
   --silver: #a5acaf;
   --dark: #101820;
-  --grey: #333333;
+  --grey: #050303;
   --gold: #b3995d;
   --blue: #272581e5;
   --black: #000000af;
@@ -138,6 +138,7 @@ body {
     width: 18px;
     height: 18px;
   }
+
 
   @media (max-width: 1024px) {
     flex-direction: column;

@@ -1,49 +1,78 @@
 import {
-    collection,
-    addDoc,
-    getDocs,
-    getDoc,
-    doc,
-    query,
-    where,
+  collection,
+  addDoc,
+  getDocs,
+  getDoc,
+  doc,
+  query,
+  where,
 } from "firebase/firestore";
 
 import { db } from "../firebase/config";
 
-/* funciones a utilizar */
-/* que sea de uso global y no definida cada vez */
-/* creamos la referencia a la coleccion: que se en mi caso son los productos cascos con el nobre de la coleccion */
-
+// referencia global a la coleccion "products"
 const productsRef = collection(db, "products");
 
-export const getProducts = async () => {
-    try {
-        const snapshot = await getDocs(productsRef);
 
-        const productsFormat = snapshot.docs.map((doc) => {
-            return { id: doc.id, ...doc.data() };
-        });
+export const checkIfProductExists = async (name, currentId = null) => {
+  try {
+    const cleanedName = name.trim().toLowerCase();
+    const snapshot = await getDocs(productsRef);
 
-        return productsFormat;
+    const duplicateDoc = snapshot.docs.find(doc => {
+      const data = doc.data();
+      return data.name && data.name.trim().toLowerCase() === cleanedName;
+    });
 
-    } catch (err) {
-        console.error("Error al obtener productos:", err);
-        return []; // devuelvo un array vacio en caso de error 
+    if (!duplicateDoc) {
+      return false;
     }
+
+    if (currentId && duplicateDoc.id === currentId) {
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error al validar duplicado:", error);
+    return false;
+  }
 };
 
-/* traer el producto por id  */
 
-// Funcion que SOLO pide un dato
+/* traer el producto con o sin categoria                      */
+
+export const getProducts = async (category = null) => {
+  try {
+    let q;
+
+    if (category) {
+      q = query(productsRef, where("category", "==", category));
+    } else {
+      q = productsRef;
+    }
+
+    const snapshot = await getDocs(q);
+
+    const productsFormat = snapshot.docs.map((doc) => {
+      return { id: doc.id, ...doc.data() };
+    });
+
+    return productsFormat;
+  } catch (error) {
+    console.error("Error al traer productos:", error);
+    return [];
+  }
+};
+
+
+/* producto por id                                               */
+
 export const getProductById = async (id) => {
   try {
-    // Creamos la referencia al documento
     const productRef = doc(db, "products", id);
-
-    // Traemos el documento:
     const snapshot = await getDoc(productRef);
 
-    // Verificamos si existe
     if (snapshot.exists()) {
       const product = { id: snapshot.id, ...snapshot.data() };
       console.log("Doc:", product);
@@ -58,27 +87,39 @@ export const getProductById = async (id) => {
 };
 
 
-/* filtro por category */                      
+/* alta de producto  y chequeo de duplicados     */
 
-export const getByCategory = async (category) => {
+export const createProduct = async (productData) => {
   try {
-    let queryRef;
-
-    if (category) {
-      queryRef = query(productsRef, where("category", "==", category));
-    } else {
-      queryRef = productsRef;
+    const isDuplicated = await checkIfProductExists(productData.name);
+    if (isDuplicated) {
+      throw new Error("El producto ya existe en la base de datos.");
     }
 
-    // Traer los documentos:
-    const snapshot = await getDocs(queryRef);
-    //Mapeo de datos para formateo
-    const productsFormat = snapshot.docs.map((doc) => {
-      return { id: doc.id, ...doc.data() };
-    });
-    return productsFormat;
+    const docRef = await addDoc(productsRef, productData);
+    return docRef.id;
   } catch (error) {
-    console.error("Error al filtrar productos:", error);
+    console.error("Error al crear producto:", error);
+    throw error;
+  }
+};
+
+
+/* categorias de firestore,si existen  */
+
+export const getCategories = async () => {
+  try {
+    const snapshot = await getDocs(productsRef);
+
+    // mapeo para extraer solo el string del campo category de cada producto
+    const allCategories = snapshot.docs.map(doc => doc.data().category);
+
+    // elimina los duplicados usando un set
+    const uniqueCategories = [...new Set(allCategories)];
+
+    return uniqueCategories;
+  } catch (error) {
+    console.error("Error al obtener las categorías:", error);
     return [];
   }
 };

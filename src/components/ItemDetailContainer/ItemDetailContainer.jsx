@@ -4,11 +4,11 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { getProductById } from "../../services/productsService";
 
 export const ItemDetailContainer = () => {
-  
+
   const { id } = useParams();
-  
+
   const [itemDetail, setItemDetail] = useState(null);
-  
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
-  
+
 
   if (loading) return <p>Cargando...</p>;
   if (!itemDetail) return <p>Producto no encontrado</p>;

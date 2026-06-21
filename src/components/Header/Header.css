@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px 30px;
-  background-color: var(--grey) !important;
+  background-color: var(--black) !important;
   border-bottom: 2px dotted var(--red) !important;
 }
 

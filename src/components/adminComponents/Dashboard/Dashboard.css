@@ -1,0 +1,138 @@
+.dashboard {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.8rem;
+  font-family: Arial, sans-serif;
+  background: #2c2c2c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  font-family: var(--title);
+}
+
+/* ---------------- header ---------------- */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #ffffff;
+  
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ---------------- acciones ---------------- */
+
+.dashboard-actions {
+  margin-bottom: 2rem;
+  
+}
+
+.dashboard .action-card.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dashboard-actions h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  
+}
+
+.actions-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-card {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--title);
+  color: var(--gold);
+  background: var(--dark);
+  border-radius: 10px;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.action-card:hover {
+  background: var(--blue);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.header-actions button:hover {
+  background-color: var(--red);
+}
+
+/* ---------------- menu ayuda ---------------- */
+
+.dashboard-help {
+  background: #383838;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--title);
+  font-weight: bold;
+  line-height: 1.4;
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-help h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  
+}
+@media (max-width: 768px) {
+  .dashboard {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions button {
+    flex: 1;
+  }
+
+  .actions-grid {
+    flex-direction: column;
+  }
+
+  .action-card {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

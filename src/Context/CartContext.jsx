@@ -31,18 +31,18 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  
+
   const decreaseQuantity = (id) => {
-  setCart(prevCart =>
-    prevCart
-      .map(item =>
-        String(item.id) === String(id)
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-      .filter(item => item.quantity > 0)
-  );
-};
+    setCart(prevCart =>
+      prevCart
+        .map(item =>
+          String(item.id) === String(id)
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter(item => item.quantity > 0)
+    );
+  };
 
   const removeItem = (id) => {
     setCart(cart.filter(item => String(item.id) !== String(id)));
@@ -54,15 +54,15 @@ export const CartProvider = ({ children }) => {
   const getCartTotal = () => cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ 
-      cart, 
-      addToCart, 
-      isInCart, 
-      removeItem, 
+    <CartContext.Provider value={{
+      cart,
+      addToCart,
+      isInCart,
+      removeItem,
       decreaseQuantity,
-      clearCart, 
-      getCartQuantity, 
-      getCartTotal 
+      clearCart,
+      getCartQuantity,
+      getCartTotal
     }}>
       {children}
     </CartContext.Provider>
