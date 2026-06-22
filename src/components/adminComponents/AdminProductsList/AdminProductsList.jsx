@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { db } from "../../../firebase/config"; // Tu config de firebase
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import "./AdminProductsList.css";
@@ -8,6 +8,9 @@ export const AdminProductsList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const currentMode = location.state?.mode || "edit";
 
   // 1. cargar productos de Firestore
   useEffect(() => {
@@ -57,7 +60,7 @@ export const AdminProductsList = () => {
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Precio</th>
-            <th>Acciones</th>
+            <th>Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -71,18 +74,22 @@ export const AdminProductsList = () => {
               <td>${prod.price}</td>
               <td>
                 {/* click para ir al formulario*/}
-                <button
-                  onClick={() => navigate(`/admin/products/edit/${prod.id}`)}
-                  className="btn-edit"
-                >
-                  ✏️ Modificar
-                </button>
-                <button
-                  onClick={() => handleDelete(prod.id, prod.name)}
-                  className="btn-delete"
-                >
-                  🗑️ Eliminar
-                </button>
+                {currentMode === "edit" && (
+                  <button
+                    onClick={() => navigate(`/admin/products/edit/${prod.id}`)}
+                    className="btn-edit"
+                  >
+                    ✏️ Modificar
+                  </button>
+                )}
+                {currentMode === "delete" && (
+                  <button
+                    onClick={() => handleDelete(prod.id, prod.name)}
+                    className="btn-delete"
+                  >
+                    🗑️ Eliminar
+                  </button>
+                )}
               </td>
             </tr>
           ))}

@@ -35,17 +35,18 @@ export const Dashboard = () => {
         <h3>Acciones rápidas</h3>
 
         <div className="actions-grid">
+          {/* para agregar un producto de la db*/}
           <Link to="/admin/products/new" className="action-card">
             ➕ Cargar
           </Link>
 
           {/* para modificar un producto de la db*/}
-          <Link to="/admin/products" className="action-card">
+          <Link to="/admin/products" state={{ mode: "edit" }} className="action-card">
             ✏️ Modificar
           </Link>
 
           {/* para eliminar un producto de la db* */}
-          <Link to="/admin/products" className="action-card">
+          <Link to="/admin/products" state={{ mode: "delete" }} className="action-card">
             🗑️ Eliminar
           </Link>
         </div>

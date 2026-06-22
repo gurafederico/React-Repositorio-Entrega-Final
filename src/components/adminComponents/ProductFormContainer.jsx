@@ -21,6 +21,8 @@ export const ProductFormContainer = () => {
     price: "",
     category: "",
     description: "",
+    detail: "",
+    image: "",
   });
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export const ProductFormContainer = () => {
           const docRef = doc(db, "products", id);
           const docSnap = await getDoc(docRef);
           if (docSnap.exists()) {
-            setProduct(docSnap.data());
+            setProduct({ id: docSnap.id, ...docSnap.data() });
           } else {
             alert("El producto no existe");
             navigate("/admin/products");
@@ -49,8 +51,8 @@ export const ProductFormContainer = () => {
   };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0] || null;
-    setFile(file);
+    const chosenFile = e.target.files[0] || null;
+    setFile(chosenFile);
   };
 
   const handleSubmit = async (e) => {
@@ -58,17 +60,20 @@ export const ProductFormContainer = () => {
     setErrors({});
     setLoading(true);
 
-    const newErrors = validateProduct({ ...product, file: isEditMode ? null : file });
-    if (Object.keys(newErrors).length > 0 && !isEditMode) {
+    const newErrors = validateProduct({
+      ...product,
+      file: isEditMode ? (file || "has-existing-image") : file
+    });
+
+    if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setLoading(false);
       return;
     }
 
     try {
-      let imageUrl = product.image; // conservamos la URL de la imagen actual por defecto
+      let imageUrl = product.image;
 
-      // si el administrador subio un archivo nuevo, lo reemplazamos
       if (file) {
         imageUrl = await uploadImage(file);
       }
@@ -88,7 +93,7 @@ export const ProductFormContainer = () => {
       } else {
         // modo creacion: alta tradicional
         const newId = await createProduct(productData);
-        setProduct({ name: "", price: "", category: "", description: "" });
+        setProduct({ name: "", price: "", category: "", description: "", detail: "", image: "" });
         setFile(null);
         navigate(`/admin/products/success/${newId}`, { replace: true });
       }
@@ -102,7 +107,6 @@ export const ProductFormContainer = () => {
 
   return (
     <div className="form-container-wrapper">
-      <h2>{isEditMode ? "Modificar Producto" : ""}</h2>
       <ProductFormUI
         product={product}
         errors={errors}

@@ -37,6 +37,9 @@
   width: 100%;
   border-collapse: collapse;
   background-color: var(--deepblue);
+  font-size: 1.1rem;
+  font-family: var(--clarendon);
+  color: var(--gold)!important;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -52,14 +55,14 @@
 .admin-table th {
   background-color: var(--grey);
   font-family: var(--college);
-  color: #9ca3af;
+  color: var(--steel);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
 }
 
 .admin-table tr:hover {
-  background-color: var(--gold);
+  background-color: var(--grey);
 }
 
 /* imagen en miniatura */
@@ -91,6 +94,7 @@
 .btn-delete {
   background-color: var(--red);
   font-family: var(--college);
+  font-size: 1rem;
   color: var(--silver);
   border: none;
   padding: 6px 12px;

@@ -59,7 +59,16 @@ export const Login = () => {
         />
       </div>
 
-      <button type="submit">Login</button>
+      <div className="form-actions">
+        <button type="submit" className="btn">Login</button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => navigate("/")}
+        >
+          Volver al Home
+        </button>
+      </div>
     </form>
   );
 

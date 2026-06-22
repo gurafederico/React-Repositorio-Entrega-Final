@@ -9,16 +9,27 @@ export const ProductSuccess = () => {
     <section className="success-page">
       <div className="success-icon">✅</div>
 
-      <h2>Producto cargado con exito</h2>
+      <h2>Producto cargado con éxito</h2>
       <p>ID de producto: {id}</p>
-      <p>Puede cargar otro haciendo click en el boton.</p>
+      <p>Puede cargar otro haciendo click en el botón.</p>
 
-      <button
-        className="btn bg-primary primary"
-        onClick={() => navigate("/admin", { replace: true })}
-      >
-        Volver al Dashboard
-      </button>
+      <div className="success-actions" style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '20px' }}>
+        {/* boton para cargar otro producto */}
+        <button
+          className="btn bg-primary primary"
+          onClick={() => navigate("/admin/products/new", { replace: true })}
+        >
+          Cargar nuevo producto
+        </button>
+
+        {/* boton para regresar al Dashboard */}
+        <button
+          className="btn bg-secondary叙 secondary"
+          onClick={() => navigate("/admin", { replace: true })}
+        >
+          Volver al Dashboard
+        </button>
+      </div>
     </section>
   );
 };

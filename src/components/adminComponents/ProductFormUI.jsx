@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./ProductFormUI.css";
 
 export const ProductFormUI = ({
   product,
@@ -10,10 +11,12 @@ export const ProductFormUI = ({
 }) => {
   const navigate = useNavigate();
 
+  const isEditing = !!product.id || !!product.image;
+
   return (
     <section>
       <form className="product-form" onSubmit={onSubmit}>
-        <h2>Agregar nuevo producto</h2>
+        <h2>{isEditing ? "Modificar Producto" : "Agregar nuevo producto"}</h2>
 
         <div>
           <label>Nombre:</label>
@@ -76,11 +79,23 @@ export const ProductFormUI = ({
 
         <div>
           <label>Imagen:</label>
+
+          {isEditing && product.image && (
+            <div className="current-image-preview" style={{ marginBottom: '10px' }}>
+              <p style={{ fontSize: '0.85rem', color: '#666', margin: '0 0 5px 0' }}>Imagen actual:</p>
+              <img
+                src={product.image}
+                alt="Vista previa del producto"
+                style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #ddd' }}
+              />
+            </div>
+          )}
+
           <input
             type="file"
             accept="image/*"
             onChange={onFileChange}
-            required
+            required={!isEditing}
           />
           {errors.file && <p className="error">{errors.file}</p>}
         </div>
