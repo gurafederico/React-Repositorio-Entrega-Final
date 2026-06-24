@@ -16,7 +16,7 @@ export const ItemDetailContainer = () => {
       .then((data) => setItemDetail(data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [id]);
 
 
   if (loading) return <p>Cargando...</p>;

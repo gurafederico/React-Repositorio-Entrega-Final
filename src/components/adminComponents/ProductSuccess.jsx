@@ -24,7 +24,7 @@ export const ProductSuccess = () => {
 
         {/* boton para regresar al Dashboard */}
         <button
-          className="btn bg-secondary叙 secondary"
+          className="btn bg-secondary secondary"
           onClick={() => navigate("/admin", { replace: true })}
         >
           Volver al Dashboard
