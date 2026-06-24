@@ -37,17 +37,17 @@ export const Dashboard = () => {
         <div className="actions-grid">
           {/* para agregar un producto de la db*/}
           <Link to="/admin/products/new" className="action-card">
-            ➕ Cargar
+            ➕ CARGAR
           </Link>
 
           {/* para modificar un producto de la db*/}
           <Link to="/admin/products" state={{ mode: "edit" }} className="action-card">
-            ✏️ Modificar
+            ✏️ MODIFICAR
           </Link>
 
           {/* para eliminar un producto de la db* */}
           <Link to="/admin/products" state={{ mode: "delete" }} className="action-card">
-            🗑️ Eliminar
+            🗑️ ELIMINAR
           </Link>
         </div>
       </section>

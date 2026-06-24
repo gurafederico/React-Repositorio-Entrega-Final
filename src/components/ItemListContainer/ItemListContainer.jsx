@@ -23,9 +23,9 @@ export const ItemListContainer = () => {
 
   return (
     <section className="store-section">
-      {/*titulo dinamico sigue dependiendo de los seleccionado en URL */}
+      {/*titulo dinamico, dependencia de si eligo o no categoria de filtro */}
       <h2 className="category-title">
-        {category ? category.toUpperCase() : "TODOS LOS PRODUCTOS"}
+        {category ? category.toUpperCase() : "Todos nuestros productos"}
       </h2>
 
       <ItemList products={products} />
